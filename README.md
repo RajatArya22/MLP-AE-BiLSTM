@@ -1,21 +1,21 @@
 # MLP-AE-BiLSTM
 🔹 1. Image Preprocessing
 Input images undergo enhancement and noise removal:
-Histogram equalization (histeq)
+
 Morphological operations: opening, closing, erosion, dilation
 
 🔹 2. Fused Feature Extraction (fused_feature.m)
 
 Multiple complementary features are extracted and fused:
 
-CSIFT features (scale, octave, layer, location, metric)
+CSIFT features (proposed Chaotic map based SIFT)
 HOG features (texture/gradient)
 Vegetation indices: NDVI, GNDVI, SVI
 Statistical feature: kurtosis
 _______________________________________________________________
 proposed.m
 
-P-LDA → Normalization → Autoencoder → BiLSTM → Classification
+P-LDA → MLP-Autoencoder → BWFS-BiLSTM → Classification
 
 🔹 Step-by-step (brief)
 
